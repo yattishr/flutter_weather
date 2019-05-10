@@ -37,29 +37,16 @@ class MyAppState extends State<MyApp> {
       home: Scaffold(
           // backgroundColor: Colors.blue,
           backgroundColor: Colors.transparent,
-          appBar: AppBar(
-            elevation: 0,
-            backgroundColor: Colors.transparent,
-            centerTitle: true,
-            title: Text('Weather Appster'),
-          ),
           body: Container(
-            // Add box decoration
-              decoration: BoxDecoration(gradient: LinearGradient(
-                // Where the linear gradient begins and ends
-                begin: Alignment.topRight,
-                end: Alignment.bottomLeft,
-                // Add one stop for each color. Stops should increase from 0 to 1
-                // stops: [0.1, 0.5, 0.7, 0.9],
-                stops: [0.1, 0.5],
-                colors: [
-                  // Colors are easy thanks to Flutter's Colors class.
-//                  Colors.indigo[800],
-//                  Colors.indigo[700],
-                  Colors.indigo[600],
-                  Colors.indigo[400]
-                ],
-              )),
+          // Add box decoration
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("lib/assets/images/image1.jpg"),
+                fit: BoxFit.cover,
+              ),
+            ),
+          // End Add box decoration
+
               child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
